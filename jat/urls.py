@@ -21,4 +21,10 @@ urlpatterns = [
          name='introduction_modify'),
     path('repository/<int:repository_pk>/introduction/<int:pk>/delete/', views.IntroductionDeleteView.as_view(),
          name='introduction_delete'),
+    path('repository/<int:repository_pk>/introduction/<int:introduction_pk>/comment/add',
+         views.CommentCreateView.as_view(), name='comment_add'),
+    path('repository/<int:repository_pk>/introduction/<int:introduction_pk>/comment/<int:pk>/modify',
+         views.CommentUpdateView.as_view(), name='comment_modify'),
+    path('repository/<int:repository_pk>/introduction/<int:introduction_pk>/comment/<int:pk>/delete',
+         views.CommentDeleteView.as_view(), name='comment_delete'),
 ]
