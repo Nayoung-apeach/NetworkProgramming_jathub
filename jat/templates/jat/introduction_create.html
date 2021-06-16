@@ -8,11 +8,9 @@
         {{ form.as_p }}
         <button type="submit">Add</button>
     </form>
-    <table>
-
-        <tr>
-            <td></td>
-        </tr>
-
-    </table>
+    <ul>
+        {% for introduction in repository.introduction_set.all %}
+            <li>version {{ introduction.version }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
