@@ -1,12 +1,11 @@
-
 {% extends 'base.html' %}
 
-{% block title %}Confirm Delete Introduction{% endblock %}
+{% block title %}Update Introduction{% endblock %}
 
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
-        Do you want to delete Introduction "{{ introduction }}"?
+        Do you want to delete Introduction {{ introduction }}?
         <button type="submit">Delete</button>
         <button type="button" onclick="history.back();">Cancel</button>
     </form>
